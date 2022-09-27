@@ -137,7 +137,16 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 8> mapStateToProps는 두 종류의 argument와 함께 호출되는 function이다.
     => 첫 번째 argument는 Redux store에서 온 state이다.
     => 두 번째 argument는 component의 props이다.
- 
+
+# 3.3 mapDispatchToProps
+1> store.getState() => getState()를 통해 state를 받는다.
+2> 최근에는 connect를 안 쓰는 추세고, useSelector와 useDispatch를 사용한다.
+  => useSelector : getState랑 똑같은 기능(store에서 정보를 가져옴)이고 리액트에서는 mapStateToProps 대체
+  => useDispatch : mapDispatchToProps 대체
+  => actionCreators는 굳이 사용할 필요가 없다.
+3> return에서 map 돌릴 때는todos가 아니라 useSelector로 가져온 toDo를 사용하면 된다.
+4> mapStateToProps는 hooks에서 useSelector, redux에서는 getState이고
+   mapDispatchToProps는 hooks에서 useDispatch, redux에서는 dispatch이다.
 
 
 
