@@ -77,4 +77,10 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
   => 이 부분에서 ...state를 앞에 하면, 항목을 추가할 때, 내가 새로 쓰는 항목이 아래로 가고, 기존에 있던 항목이 위로 향한다.
 3> 데이터들을 내가 직접 입력한 후, 입력한 데이터를 삭제할 수 있게끔 구현.
 
+# 2.3 Delete ToDo(part 2)
+1> 빈 칸에 내가 쓴 항목들 중 특정 항목만 del할 수 있게 구현 => id를 준다.
+2> delete element from array => splice() : array의 컨텐츠를 바꾼다. => state를 mutate하므로 쓰지 말자
+3> filter() : arrary를 새로 만든다. => 이걸 사용한다.
+4> 
+
 
