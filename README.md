@@ -34,3 +34,8 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 2> 나의 data를 modify할 수 있는 function은 오직 countModifier다. 
 3> countModifier 함수와 외부에서 커뷰니케이션을 할 수 있는 건 countModifier에게 action을 보내는 것이다.
 4> countStore.dispatch({ type : "ADD" }); => 이것이 action으로 countModifier에 대입된다.
+
+# 1.3 Subscriptions
+1> add.addEventListener("click", () => countStore.dispatch({ type: "ADD"}));
+    => add 버튼을 눌렀을 때 생기는 일
+2> console 창에 subscribe: f => store 안에 있는 변화들을 알 수 있게 해준다.
