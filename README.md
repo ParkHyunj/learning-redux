@@ -34,8 +34,22 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 2> 나의 data를 modify할 수 있는 function은 오직 countModifier다. 
 3> countModifier 함수와 외부에서 커뷰니케이션을 할 수 있는 건 countModifier에게 action을 보내는 것이다.
 4> countStore.dispatch({ type : "ADD" }); => 이것이 action으로 countModifier에 대입된다.
+5> Reducer에게 Action을 보내는 방법 : store.dispatch({key: value});
 
 # 1.3 Subscriptions
 1> add.addEventListener("click", () => countStore.dispatch({ type: "ADD"}));
     => add 버튼을 눌렀을 때 생기는 일
 2> console 창에 subscribe: f => store 안에 있는 변화들을 알 수 있게 해준다.
+3> Subscribe : store 안에 있는 변화 감지
+    => store.subscribe(func); // store안의 변화를 감지하면 func 실행
+
+# 1.4 Recap Refactor
+1> countModifier 함수에서 return되는 것이 application의 state가 된다.
+2> dispatch : reducer에게 action을 보내는 방법
+3> subscribe : store의 변화를 감지하면 인자값으로 준 함수를 실행
+4> countStore.subscribe(onChange);
+    => 변화를 나의 store에서 감지하고 싶다면 onChange를 subscribe하면 된다.
+5> reducer : 현재 상태의 application과 함께 불려지는 function (+ with action) / return하는 것은 application의 state가 됨
+6> action : reducer와 소통하는 방법으로 Object여야 하며 그 key 이름은 항상 type이다. => dispatch({type: " "})
+7> string으로 바로 쓰는 대신에 const variable로 선언해서 사용하기 -> 에러 발견 용이
+8> switch가 자주 쓰인다.(if else문 대신) => switch(action.type){
