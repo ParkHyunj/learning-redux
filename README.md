@@ -124,7 +124,20 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 3> react는 모든 것을 다시 render하지 않고, 변화가 있는 부분만 render한다.
   => 그래서 react-redux가 필요하다. 왜냐하면, store의 변동사항에 대해 subscribe하고 싶기 때문이다. 그리고 그것이 바뀔 때마다 render가 되기를 바란다.
 4> src 하위 파일로 store.js를 만들었고, index.js에 impor한다.
-      
+
+# 3.2 mapStateToProps
+1> redux state로부터 정보를 가지고 올 수 있어야 한다.
+2> store.getState() => 현재의 state를 전달한다.
+3> <ul></ul>에서 store로부터 state를 가져올 수 있도록 해야 한다.
+4> redux에서 connect 함수 : components들을 store에 연결시켜 준다.
+5> connect는 2개의 argument를 갖는다. state, dispatch
+6> connect()는 return한 것을 component의 prop에 추가해준다.
+7> connect(mapStateToProps)(Home)가 ES6인가요?
+    => connect 함수를 들여다봐야 알겠지만 만약 connect함수가 파라미터를 요구하고 connect가 return하는 함수가 다시 또 다른 파라미터를 요구하면 저런식으로 써서 mapStateToProps가 connect 함수의 파라미터, 내부의 리턴 함수에 필요한 파라미터가 Home으로 들어가는 구조입니다.
+8> mapStateToProps는 두 종류의 argument와 함께 호출되는 function이다.
+    => 첫 번째 argument는 Redux store에서 온 state이다.
+    => 두 번째 argument는 component의 props이다.
+ 
 
 
 
