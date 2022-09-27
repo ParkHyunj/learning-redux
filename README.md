@@ -53,3 +53,7 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 6> action : reducer와 소통하는 방법으로 Object여야 하며 그 key 이름은 항상 type이다. => dispatch({type: " "})
 7> string으로 바로 쓰는 대신에 const variable로 선언해서 사용하기 -> 에러 발견 용이
 8> switch가 자주 쓰인다.(if else문 대신) => switch(action.type){
+
+# 2.0 Vanilla ToDo
+1> index.html만 보면, 데이터가 없이 내가 쓰는 것에 대해서만 반응할 뿐, 저장도 안되고, 특정 값을 지울 수도 없다.
+2> 리덕스를 통해, array에서 특정 data를 지우거나 저장할 수 있게 해보자.
