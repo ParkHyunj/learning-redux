@@ -71,4 +71,10 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
     => React는 상황이 바뀌면 UI를 다시 렌더링하는데, 새로운 것을 만드는 대신 변경하면 Javascript가 객체가 다른지 알기가 어려워서
     ex) 예를 들어 배열 x = [1,2,3]이 있는 경우, 그리고 우리는 x.push(4)를 하면, 'x'는 여전히 동일한 '메모리 주소'의 배열입니다.
 
+# 2.2 Delete ToDo
+1> toDo를 삭제할 때, dispatch 시 id로 넘겨줘야 한다.
+2> return [{ text: action.text, id: Date.now() }, ...state];
+  => 이 부분에서 ...state를 앞에 하면, 항목을 추가할 때, 내가 새로 쓰는 항목이 아래로 가고, 기존에 있던 항목이 위로 향한다.
+3> 데이터들을 내가 직접 입력한 후, 입력한 데이터를 삭제할 수 있게끔 구현.
+
 
