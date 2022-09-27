@@ -81,6 +81,29 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 1> 빈 칸에 내가 쓴 항목들 중 특정 항목만 del할 수 있게 구현 => id를 준다.
 2> delete element from array => splice() : array의 컨텐츠를 바꾼다. => state를 mutate하므로 쓰지 말자
 3> filter() : arrary를 새로 만든다. => 이걸 사용한다.
-4> 
+
+# Conculsions
+1> [ ...state ] => 이게 결국 새로운 배열을 만드는 것이다.
+2>  const dispatchAddToDo = text => {
+    store.dispatch(addToDo(text));
+    };
+    => 이 function은 오로지 action을 dispatch하기 위한 용도
+3> const addToDo = text => {
+    return {
+        type: ADD_TODO,
+        text
+    };
+   };
+   => objects를 return하고 있으며, 이 object는 action에 보내진다.
+4>  case ADD_TODO:
+      const newToDoObj = { text: action.text, id: Date.now() };
+      return [newToDoObj, ...state];
+    case DELETE_TODO:
+      const cleaned = state.filter(toDo => toDo.id !== action.id);
+      return cleaned;
+   => state를 mutate하지 않고, 새로운 state를 만들고 있다.
+5> Vanilla & Redux
+      
+
 
 
