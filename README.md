@@ -12,5 +12,18 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 # 1.0 Vanilla Counter
 1> 첫 번째로, 모든 걸 바닐라로만 한다. => public 하위에 있는 index.html 사용
 2> count = count + 1; <=> count ++
-3> html에 뭔가가 바뀌었다고, 알려주기 위해서 함수를 쓰는 것 => 리덕스
-4> Vanilla js로 add, minus 단추를 만들어 누를때마다 각각 +1, -1 되게끔 설정 후, const updateText로 내가 버튼을 누르는 것에 대한 업데이트 결과를 html에 표현한 것.
+3> let count = 0;
+    => 여기서 유일한 data이자 바뀌는 곳.
+4> const updateText = () => {
+    number.innerText = count;
+    };
+    => html에 count를 업데이트하라고 알려주는 함수.
+5> Vanilla js로 add, minus 단추를 만들어 누를때마다 각각 +1, -1 되게끔 설정 후, const updateText로 내가 버튼을 누르는 것에 대한 업데이트 결과를 html에 표현한 것.
+
+# 1.1 Store and Reducer
+1> 1.0의 예시를 사용해서 redux로 만들어보자. => Vanilla Redux
+2> npm install redux
+3> store =  나의 data를 저장하는 곳 => state = 나의 application에서 바뀌는 data를 말한다.
+4> const store = createStore();라고 하면 오류가 나서 그 위에 const reducer = () => {};라고 쓴 후, ()안에 reducer 써주기
+5> reducer는 함수로써, 나의 data를 수정(업데이트)한다.
+6> reducer 함수에서 return하는 것은 내 application의 data가 된다.
