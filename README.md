@@ -103,6 +103,18 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
       return cleaned;
    => state를 mutate하지 않고, 새로운 state를 만들고 있다.
 5> Vanilla & Redux
+
+# 3.0 Setup
+1> React-Redux를 하기 위한 setting하기
+2> index.html <body>부분 원래대로 해놓기
+3> components 폴더를 만든 후, App.js 만들기
+4> index.js는 App.js에 대하여 npx create-react-app 했을 때의 setting으로 해놓기
+5> npm install reat-router-dom
+6> npm install react-redux
+7> import ReactDOMClient from 'react-dom/client';
+8>  <BrowserRouter>
+        <App />
+    </BrowserRouter>
       
 
 
