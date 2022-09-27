@@ -27,3 +27,10 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 4> const store = createStore();라고 하면 오류가 나서 그 위에 const reducer = () => {};라고 쓴 후, ()안에 reducer 써주기
 5> reducer는 함수로써, 나의 data를 수정(업데이트)한다.
 6> reducer 함수에서 return하는 것은 내 application의 data가 된다.
+7> createstore은 store을 create한다.   
+
+# 1.2 Actions
+1> Action : redux에서 function을 부를 때 쓰는 두번 째 parameter 또는 argument라고 한다.
+2> 나의 data를 modify할 수 있는 function은 오직 countModifier다. 
+3> countModifier 함수와 외부에서 커뷰니케이션을 할 수 있는 건 countModifier에게 action을 보내는 것이다.
+4> countStore.dispatch({ type : "ADD" }); => 이것이 action으로 countModifier에 대입된다.
