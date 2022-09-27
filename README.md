@@ -115,6 +115,15 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 8>  <BrowserRouter>
         <App />
     </BrowserRouter>
+
+# 3.1 Connecting the Store
+1> React Redux에는 Provider컴포넌트를 통해 앱의 다른 컴포넌트에서 Redux store를 사용할 수 있다.
+2> import { createStore } from "redux"; 
+   const store = createStore();
+   => const store 윗 줄에 const reducer = (state = [], action) => {} 쓰기
+3> react는 모든 것을 다시 render하지 않고, 변화가 있는 부분만 render한다.
+  => 그래서 react-redux가 필요하다. 왜냐하면, store의 변동사항에 대해 subscribe하고 싶기 때문이다. 그리고 그것이 바뀔 때마다 render가 되기를 바란다.
+4> src 하위 파일로 store.js를 만들었고, index.js에 impor한다.
       
 
 
