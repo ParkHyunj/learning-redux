@@ -148,5 +148,12 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 4> mapStateToProps는 hooks에서 useSelector, redux에서는 getState이고
    mapDispatchToProps는 hooks에서 useDispatch, redux에서는 dispatch이다.
 
+# 3.4 Deleting To Do
+1> const toDo = useSelector((state) => state);
+    => useSelector를 통해 store의 state를 바로 가져온다.
+2> 항목을 추가한 후, 특정 항목 삭제하기 구현
+3> onBtnClick: () => : ToDo의 props와 redux-store의 dispatch의 조합으로 만든 함수
+
+
 
 

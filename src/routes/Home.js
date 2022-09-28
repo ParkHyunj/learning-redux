@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
+import ToDo from '../components/ToDo';
+import { actionCreators } from "../store";
 
 function Home({addToDo}) {
   const [text, setText] = useState("");
@@ -11,8 +13,7 @@ function Home({addToDo}) {
     }
   function onSubmit(e) {
     e.preventDefault();
-    console.log(text);
-    dispatch(addToDo(text));
+    dispatch(actionCreators.addToDo(text));
     setText("");
     }
     return (
@@ -25,7 +26,9 @@ function Home({addToDo}) {
           </button>
         </form>
         <ul>
-          {JSON.stringify(toDo)}
+          {toDo.map(toDo => (
+            <ToDo {...toDo} key={toDo.id} />
+           ))}
         </ul>
       </div>
     );
