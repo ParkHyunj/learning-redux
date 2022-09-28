@@ -157,6 +157,12 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 # 3.5 Detail Screen
 1> 내가 추가한 항목들에 link를 달아서 url 뒤에 나오는 임의의 숫자 구현
 
+# 3.6 Redux Local Storage
+1> ToDo 리스트를 Local Storage에 저장하고, 관리하기(redux local storage 참고)
+2> store.js에서 reducer에 initialState 할당하는 부분 수정
+3> save함수 추가하고 새로운 state를 리턴하기 전에 호출
+4> toDo.map() => toDo.reducer.map()으로 고치기
+
 
 
 
