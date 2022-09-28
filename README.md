@@ -167,4 +167,9 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 1> 적은량의 코드로 같은 기능을 하도록 도와주는 package 모음.
 2> npm install @reduxjs/toolkit
 
+# 4.1 createAction
+1> import { createAction } from "@reduxjs/toolkit";
+2> 지금부터는 action으로부터 뭔가를 받으면, payload의 안쪽으로 간다.
+
+
 
