@@ -181,5 +181,11 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 3> createReducer()에서는 새로운 state를 리턴하거나, state를 mutate할 수 있다.
 4> createReducer()에서는 switch, case를 사용할 필요가 없고, state를 mutate 할 수 있게 해준다.
 
+# 4.3 configureStore
+1> configureStore() 함수는 나의 state에 어떤 일이 발생했는지 정확하게 알 수 있다.
+2> Redux DevTools 설치하기(구글 확장 프로그램)  
+  => https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ko
+3> 개발자 도구 차에서 redux를 누르면, 모든 state의 변화를 볼 수 있다.
+
 
 
