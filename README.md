@@ -187,5 +187,15 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
   => https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ko
 3> 개발자 도구 차에서 redux를 누르면, 모든 state의 변화를 볼 수 있다.
 
+# 4.4 createSlice
+1> createSlice
+  => 초기 state, reducer 함수의 객체, "slice 이름"을 받아 리듀서 및 state에 해당하는 action crator와 action type을 자동으로 생성하는 함수
+  => 내부적으로는 createAction 및 createReducer를 사용하므로 Immer를 사용하여 "mutating" 불변 업데이트를 작성할 수도 있다.
+2> createSlice 함수는 reducer뿐만 아니라, action도 생성한다.
+3> createSlice 함수는 옵션으로,
+  => 첫 번째 옵션: name: '';
+  => 두 번째 옵션: initialState: []
+  => 세 번째 옵션: reducers: { }
+
 
 
