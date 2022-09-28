@@ -197,5 +197,14 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
   => 두 번째 옵션: initialState: []
   => 세 번째 옵션: reducers: { }
 
-
+# 4.5 Conclusions
+1> 2개 이상의 reducer를 사용해야 하는 경우에는
+    const allReducer = combineReducers({
+    <<여기에 관리할 리듀서 다 써주면 됨>>
+    ex) //user,
+        //textlist
+    })
+    const store = configureStore({reducer: allReducer});
+2> 데이터가 배열인 경우에 map으로 꺼낼 때, useSelector로 꺼내온 데이터를 변수로 지정하고 console.log 해보면, combineReducers에서 적어놓은 reducer 이름으로 배열이 만들어져 있다.
+   const data = useSelector(state => state)로 빼왔으면 data.리듀서이름.map 으로 꺼내면 된다.
 
