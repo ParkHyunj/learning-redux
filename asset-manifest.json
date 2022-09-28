@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/learning-redux/static/js/main.7403c530.js",
+    "static/js/787.27dfb4b6.chunk.js": "/learning-redux/static/js/787.27dfb4b6.chunk.js",
+    "index.html": "/learning-redux/index.html",
+    "main.7403c530.js.map": "/learning-redux/static/js/main.7403c530.js.map",
+    "787.27dfb4b6.chunk.js.map": "/learning-redux/static/js/787.27dfb4b6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7403c530.js"
+  ]
+}
