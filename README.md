@@ -163,6 +163,8 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 3> save함수 추가하고 새로운 state를 리턴하기 전에 호출
 4> toDo.map() => toDo.reducer.map()으로 고치기
 
-
+# 4.0 Redux Toolkit
+1> 적은량의 코드로 같은 기능을 하도록 도와주는 package 모음.
+2> npm install @reduxjs/toolkit
 
 
