@@ -171,5 +171,15 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 1> import { createAction } from "@reduxjs/toolkit";
 2> 지금부터는 action으로부터 뭔가를 받으면, payload의 안쪽으로 간다.
 
+# 4.2 createReducer
+1> redux에서 state를 mutate하는 이유는?
+  => redux toolkit이 immer 아래 작동하기 때문이다.
+  => immer : 현재 상태를 변경하여 다음 불변 상태를 만든다.
+  => 이것 또한 새로운 state를 return하는 것이기 때문에 신경 쓰지 말자!
+2> Array.prototype.unshift() 
+  => unshift() 메서드는 새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환한다.
+3> createReducer()에서는 새로운 state를 리턴하거나, state를 mutate할 수 있다.
+4> createReducer()에서는 switch, case를 사용할 필요가 없고, state를 mutate 할 수 있게 해준다.
+
 
 
