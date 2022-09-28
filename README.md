@@ -154,6 +154,9 @@ app.css / app.js / app.test.js / index.css / logo.svg / reportwebvitals.js / set
 2> 항목을 추가한 후, 특정 항목 삭제하기 구현
 3> onBtnClick: () => : ToDo의 props와 redux-store의 dispatch의 조합으로 만든 함수
 
+# 3.5 Detail Screen
+1> 내가 추가한 항목들에 link를 달아서 url 뒤에 나오는 임의의 숫자 구현
+
 
 
 

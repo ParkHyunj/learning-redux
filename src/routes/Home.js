@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ToDo from '../components/ToDo';
 import { actionCreators } from "../store";
 
-function Home({addToDo}) {
+function Home() {
   const [text, setText] = useState("");
   const toDo = useSelector((state) => state);
   const dispatch = useDispatch();
