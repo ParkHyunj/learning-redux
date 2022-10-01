@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function ToDo({ text, onBtnClick, id }) {
   return (
     <li>
-        <Link to={`/${id}`}>{text}</Link>
+        <Link to={`/learning-redux/${id}`}>{text}</Link>
         <button onClick={onBtnClick}>DEL</button>
     </li>
   );
