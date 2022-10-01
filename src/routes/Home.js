@@ -1,37 +1,45 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import ToDo from '../components/ToDo';
-import { add } from "../store";
+import { connect } from "react-redux";
+import { add } from "../components/store";
+import ToDo from "../components/ToDo";
 
-function Home() {
+function Home({ toDos, addToDo }) {
   const [text, setText] = useState("");
-  const toDo = useSelector((state) => state);
-  const dispatch = useDispatch();
-  
-  function onChange(e) {
-    setText(e.target.value);
-    }
-  function onSubmit(e) {
-    e.preventDefault();
-    dispatch(add.addToDo(text));
-    setText("");
-    }
-    return (
-      <div>
-        <h1>To Do</h1>
-        <form onSubmit={onSubmit}>
-          <input type="text" value={text} onChange={onChange} />
-          <button>
-            Add
-          </button>
-        </form>
-        <ul>
-          {toDo.map(toDo => (
-            <ToDo {...toDo} key={toDo.id} />
-           ))}
-        </ul>
-      </div>
-    );
+
+  function onChange(event) {
+    setText(event.target.value);
   }
-  
-  export default Home;
+
+  function onSubmit(event) {
+    event.preventDefault();
+    addToDo(text);
+    setText("");
+  }
+
+  return (
+    <div>
+      <h1>To Do</h1>
+      <form onSubmit={onSubmit}>
+        <input type="text" value={text} onChange={onChange} />
+        <button>Add</button>
+      </form>
+      <ul>
+        {toDos.map(toDo => (
+          <ToDo {...toDo} key={toDo.id} />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function mapStateToProps(state) {
+  return { toDos: state };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addToDo: text => dispatch(add(text))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
